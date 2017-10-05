@@ -46,8 +46,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:rowCount="3"
         android:columnCount="3">
+
     </GridLayout>
 
 

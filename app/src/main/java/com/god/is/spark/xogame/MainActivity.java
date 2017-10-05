@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // game field size 3 = 3x3, 4 = 4x4, etc.
-    private int fieldSize = 3;
+    private int fieldSize = 4;
 
     // - represents game field state like X,O,X,O,O...
     // - length equal squared *fieldSize*
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         GridLayout gameField = (GridLayout)findViewById(R.id.gameField);
 
         gameField.removeAllViews();
-        gameField.setRowCount(fieldSize);
+        //gameField.setRowCount(fieldSize);
         gameField.setColumnCount(fieldSize);
 
         for (int i = 0; i < fieldSize * fieldSize; i++) {
@@ -82,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
 
         button.setTag(pos);
         button.setLayoutParams(layoutParams);
+        button.setMinWidth(0);
+        button.setMinimumWidth(0);
+        button.setMinimumHeight(0);
+        button.setMinHeight(0);
         handleTileClick(button);
 
         gameField.addView(button);
