@@ -2,6 +2,8 @@ package com.god.is.spark.xogame;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -34,6 +36,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        fieldSize = Character.getNumericValue(item.getTitle().charAt(0));
+
+        return super.onOptionsItemSelected(item);
+    }
 
     public void startRound(View view){
 
