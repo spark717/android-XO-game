@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
 
         GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
 
-        layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT;
-        layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        layoutParams.width = 0;
+        layoutParams.height = 0;
         layoutParams.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
         layoutParams.rowSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
 
